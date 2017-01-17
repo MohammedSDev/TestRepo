@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :employees
   get 'jobs/index'
 
   get 'jobs/show'

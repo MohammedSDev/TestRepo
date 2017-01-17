@@ -2,11 +2,27 @@
 <p>Find me in app/views/jobs/index.html.erb</p>
 
 
-<div>
+<!-- <div>
 <p>Jobs</p>
-	<% @jobs.each do |job|%>
-		<%= "#{job.id} \t #{job.name} \t #{job.salary}"%>
+	# <% @jobs.each do |job|%>
+	# 	<%= "#{job.id} \t #{job.name} \t #{job.salary}"%>
+	# 	<br>
+	# <%end %>
+</div> -->
+
+
+<div>
+	<%Job.all.each do |job|%>
+		<%= "#{job.id} \t #{job.name}\t#{job.salary}" %>
+		
+		
+
+		<%job.employees.each do |e|%>
+		<p><i>Employees</i></p>
+			<%= "#{e.name} #{e.age}"%><br>
+		<%end if job.employees%>
 		<br>
-	<%end %>
+	<%end%>
+
 </div>
 
