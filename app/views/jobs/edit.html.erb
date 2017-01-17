@@ -1,2 +1,15 @@
 <h1>Jobs#edit</h1>
 <p>Find me in app/views/jobs/edit.html.erb</p>
+
+
+<div>
+	<%=form_for :job,url: {action: "update",id: @job} do |f| %>
+		<%=f.label :name%><br>
+		<%=f.text_field :name%><br>
+		<%=f.label :salary%><br>
+		<%=f.text_field :salary%><br>
+		<br><br>
+		<%=f.submit%>
+		
+	<%end%>
+</div>

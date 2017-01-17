@@ -2,10 +2,17 @@ Rails.application.routes.draw do
   get 'jobs/index'
 
   get 'jobs/show'
+  
+  get 'jobs/new'
+
+  post 'jobs/create'
+  post 'jobs/update'
 
   get 'jobs/edit'
 
-  get 'jobs/new'
+  match 'jobs/edit/:id' ,to: 'jobs#edit' ,via: :get
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
