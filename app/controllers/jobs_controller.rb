@@ -1,7 +1,10 @@
 class JobsController < ApplicationController
 
   def index
+    # byebug
+
   	@jobs = Job.all
+    
   end
 
   def show
